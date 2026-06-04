@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
     int start, end, num, temp, rem, sum;
