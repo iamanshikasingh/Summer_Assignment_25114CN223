@@ -2,8 +2,7 @@
 int main()
 {
     int x, n, i;
-    int p = 1;
-
+    int p = 1
     printf("Enter number and power ");
     scanf("%d%d", &x, &n);
 
