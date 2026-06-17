@@ -13,8 +13,15 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> a[i];
 
-    // Reverse the array
-    for (int i = n - 1; i >= 0; i--)
+    int temp = a[0];
+
+    for (int i = 0; i < n - 1; i++)
+        a[i] = a[i + 1];
+
+    a[n - 1] = temp;
+
+    cout << "Array after left rotation: ";
+    for (int i = 0; i < n; i++)
         cout << a[i] << " ";
 
     return 0;
