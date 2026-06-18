@@ -13,18 +13,20 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> a[i];
 
-    // Bubble Sort
+    // Selection Sort
     for (int i = 0; i < n - 1; i++)
     {
-        for (int j = 0; j < n - i - 1; j++)
+        int min = i;
+
+        for (int j = i + 1; j < n; j++)
         {
-            if (a[j] > a[j + 1])
-            {
-                int temp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = temp;
-            }
+            if (a[j] < a[min])
+                min = j;
         }
+
+        int temp = a[i];
+        a[i] = a[min];
+        a[min] = temp;
     }
 
     cout << "Sorted array: ";
