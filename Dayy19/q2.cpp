@@ -8,7 +8,7 @@ int main()
     cout << "Enter number of rows and columns: ";
     cin >> r >> c;
 
-    int a[r][c], b[r][c], sum[r][c];
+    int a[r][c], b[r][c], diff[r][c];
 
     cout << "Enter elements of first matrix:\n";
     for (int i = 0; i < r; i++)
@@ -24,18 +24,18 @@ int main()
             cin >> b[i][j];
     }
 
-    // Add matrices
+    // Subtract matrices
     for (int i = 0; i < r; i++)
     {
         for (int j = 0; j < c; j++)
-            sum[i][j] = a[i][j] + b[i][j];
+            diff[i][j] = a[i][j] - b[i][j];
     }
 
-    cout << "Sum of matrices:\n";
+    cout << "Difference of matrices:\n";
     for (int i = 0; i < r; i++)
     {
         for (int j = 0; j < c; j++)
-            cout << sum[i][j] << " ";
+            cout << diff[i][j] << " ";
         cout << endl;
     }
 
