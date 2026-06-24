@@ -14,18 +14,18 @@ int main() {
         freq[(int)str[i]]++;
     }
 
-    // Step 2: Find first character with frequency 1
+    // Step 2: Find first repeating character
     bool found = false;
     for (int i = 0; i < str.length(); i++) {
-        if (freq[(int)str[i]] == 1) {
-            cout << "First non-repeating character: " << str[i] << endl;
+        if (freq[(int)str[i]] > 1) {
+            cout << "First repeating character: " << str[i] << endl;
             found = true;
             break;
         }
     }
 
     if (!found) {
-        cout << "No non-repeating character found" << endl;
+        cout << "No repeating character found" << endl;
     }
 
     return 0;
